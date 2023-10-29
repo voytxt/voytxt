@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { onDestroy } from 'svelte';
+
   const GRID_SIZE = 30;
 
   const grid: Square[][] = Array(GRID_SIZE)
@@ -33,6 +35,10 @@
       if (food[0] === i && food[1] === j) return 'food';
       return square;
     });
+  });
+
+  onDestroy(() => {
+    clearInterval(interval);
   });
 
   function newFood(): [number, number] {

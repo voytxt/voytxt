@@ -1,3 +1,7 @@
+<script lang="ts">
+  import '$lib/styles.css';
+</script>
+
 <header>
   <h1>voytxt</h1>
 </header>
@@ -32,19 +36,6 @@
     --textStrokeWidth: 4px;
     --textOffsetBottom: -0.33em;
     --textOffsetRight: -0.32em;
-  }
-
-  /* using properties instead of variables, so we can use a hover transition on the gradient */
-  /* not supported in Firefox */
-  @property --purple {
-    syntax: '<color>';
-    initial-value: purple;
-    inherits: false;
-  }
-  @property --teal {
-    syntax: '<color>';
-    initial-value: #20ebc6;
-    inherits: false;
   }
 
   header {

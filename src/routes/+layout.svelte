@@ -1,3 +1,7 @@
+<script lang="ts">
+  import '$lib/styles.css';
+</script>
+
 <div>
   <main>
     <slot />
@@ -14,7 +18,7 @@
 <style>
   :global(body) {
     font-family: system-ui, -apple-system, sans-serif;
-    background-color: #20ebc6;
+    background-color: var(--teal);
     margin: 0;
   }
 
