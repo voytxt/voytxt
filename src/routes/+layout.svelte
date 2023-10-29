@@ -14,6 +14,7 @@
 <style>
   :global(body) {
     font-family: system-ui, -apple-system, sans-serif;
+    background-color: #20ebc6;
     margin: 0;
   }
 

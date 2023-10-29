@@ -3,8 +3,11 @@
 </header>
 
 <main>
+  <time datetime="2021-10">2021-10</time> <a href="/snake">snake</a> <br />
   <time datetime="2021-08">2021-08</time> <a href="/repos">old portfolio</a> <br />
   <time datetime="2021-07">2021-07</time> <a href="/clock">analog clock</a> <br />
+  <time datetime="2021-06">2021-06</time> <a href="https://cube-timer-1.vercel.app/">cube timer</a>
+  <br />
   <time datetime="2021-03">2021-03</time> covid chart (doesn't work anymore) <br />
   <time datetime="2020-05">2020-05</time> <a href="/time">time online</a> <br />
 </main>
@@ -20,8 +23,6 @@
 
 <style>
   :root {
-    --teal: #20ebc6;
-    --purple: purple;
     --orange: #eba674;
 
     --imageRoundness: 80px;
@@ -33,22 +34,17 @@
     --textOffsetRight: -0.32em;
   }
 
-  /* using properties, so we can use a hover transition on the gradient */
+  /* using properties instead of variables, so we can use a hover transition on the gradient */
   /* not supported in Firefox */
-  @property --gradientColorA {
+  @property --purple {
     syntax: '<color>';
     initial-value: purple;
     inherits: false;
   }
-  @property --gradientColorB {
+  @property --teal {
     syntax: '<color>';
     initial-value: #20ebc6;
     inherits: false;
-  }
-
-  :global(body) {
-    background-color: var(--teal);
-    color: var(--colorPrimary) !important;
   }
 
   header {
@@ -76,21 +72,21 @@
     margin: 0;
     background-image: conic-gradient(
       at calc(100% + var(--textOffsetRight)) calc(100% + var(--textOffsetBottom)),
-      var(--gradientColorA) 0.75turn,
-      var(--gradientColorB) 0.75turn
+      var(--purple) 0.75turn,
+      var(--teal) 0.75turn
     );
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     -webkit-text-stroke-width: var(--textStrokeWidth);
-    transition-property: all, --gradientColorA, --gradientColorB;
+    transition-property: all, --purple, --teal;
     transition-duration: var(--hoverTransitionDuration);
     transition-timing-function: ease-in-out;
   }
   header:hover h1 {
     -webkit-text-stroke-color: var(--orange);
-    --gradientColorA: var(--orange);
-    --gradientColorB: transparent;
+    --purple: var(--orange);
+    --teal: transparent;
   }
 
   main {
