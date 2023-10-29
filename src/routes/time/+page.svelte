@@ -21,3 +21,9 @@
 </script>
 
 <h1>{h}:{m}:{s}</h1>
+
+<style>
+  h1 {
+    text-align: center;
+  }
+</style>

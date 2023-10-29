@@ -1,4 +1,4 @@
-<h1><pre>@voytxt</pre></h1>
+<h1>@voytxt</h1>
 
 <div>
   <time datetime="2021-08">2021-08</time> <a href="/repos">old portfolio</a> <br />
@@ -8,9 +8,11 @@
 </div>
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:wght@700&display=swap');
+
   h1 {
     text-align: center;
-    line-height: 0;
+    font-family: 'SomeType Mono', monospace;
   }
 
   div {

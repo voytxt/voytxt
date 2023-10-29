@@ -45,13 +45,24 @@
     text-align: center;
     font-size: 5rem;
   }
+  @media screen and (max-width: 500px) {
+    h1 {
+      font-size: 3rem;
+    }
+  }
 
   main {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
     width: 80%;
     margin: 0 auto;
+  }
+  @media screen and (max-width: 500px) {
+    main {
+      width: calc(100% - 2rem);
+      grid-template-columns: 1fr;
+    }
   }
 
   #repos .loading {
@@ -71,6 +82,11 @@
     padding: 2rem;
     transition: 0.25s;
   }
+  @media screen and (max-width: 500px) {
+    .repo {
+      font-size: 1rem;
+    }
+  }
 
   .repo:hover {
     background-color: azure;
@@ -78,5 +94,10 @@
 
   .repo .name {
     font-size: 2.25rem;
+  }
+  @media screen and (max-width: 500px) {
+    .repo .name {
+      font-size: 1.5rem;
+    }
   }
 </style>
