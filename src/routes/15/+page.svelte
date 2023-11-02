@@ -118,6 +118,11 @@
     padding: 0.5rem;
     user-select: none;
   }
+  @media screen and (width < 700px) {
+    main {
+      grid-template: repeat(4, 4rem) / repeat(4, 4rem);
+    }
+  }
 
   main .square {
     background-color: lightblue;

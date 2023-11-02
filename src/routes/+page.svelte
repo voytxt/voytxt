@@ -39,12 +39,26 @@
     --textOffsetBottom: -0.33em;
     --textOffsetRight: -0.32em;
   }
+  @media screen and (width < 500px) {
+    :root {
+      --textSize: 5rem;
+      --textStrokeWidth: 3px;
+    }
+  }
+  @media screen and (width < 400px) {
+    :root {
+      --textSize: 4rem;
+      --textStrokeWidth: 2px;
+    }
+  }
 
   header {
     background: url('/cattus512.png');
+    background-size: 120%;
+    background-position: 20% 20%;
     margin: 2rem auto;
-    width: 420px;
-    height: 420px;
+    width: min(420px, 80vw);
+    height: min(420px, 80vw);
     position: relative;
     border-radius: 0 var(--imageRoundness) 0;
     user-select: none;

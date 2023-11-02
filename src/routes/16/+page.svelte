@@ -51,6 +51,22 @@
   }
   header h1 {
     font-size: 7rem;
+    text-align: center;
+    margin: 0 2rem;
+  }
+  @media screen and (width < 1200px) {
+    header h1 {
+      font-size: 5rem;
+    }
+  }
+  @media screen and (width < 500px) {
+    header {
+      height: 30vh;
+    }
+
+    header h1 {
+      font-size: 3rem;
+    }
   }
 
   svg {
@@ -73,6 +89,7 @@
 
   main div h2 {
     font-weight: 600;
+    margin: 0 1rem;
   }
 
   main div button {
@@ -99,10 +116,25 @@
 
   .result {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+  .result img {
+    max-width: 80vw;
+  }
   .result span {
     font-size: 6rem;
+    text-align: center;
+  }
+  @media screen and (width < 1200px) {
+    .result span {
+      font-size: 4rem;
+    }
+  }
+  @media screen and (width < 500px) {
+    .result span {
+      font-size: 2rem;
+    }
   }
 </style>
