@@ -18,8 +18,11 @@
 <style>
   :global(body) {
     font-family: system-ui, -apple-system, sans-serif;
-    background-color: var(--teal);
     margin: 0;
+  }
+
+  :global(body:has(.teal)) {
+    background-color: var(--teal);
   }
 
   div {
