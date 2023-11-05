@@ -10,6 +10,7 @@
   <time datetime="2022-03">2022-03</time> <a href="/16">16 assholes</a> <br />
   <time datetime="2021-10">2021-10</time> <a href="/snake">snake</a> <br />
   <time datetime="2021-08">2021-08</time> <a href="/repos">old portfolio</a> <br />
+  <time datetime="2021-07">2021-07</time> <a href="/bogo">bogo sort</a> <br />
   <time datetime="2021-07">2021-07</time> <a href="/clock">analog clock</a> <br />
   <time datetime="2021-07">2021-07</time> <a href="/15">15 puzzle</a> <br />
   <time datetime="2021-06">2021-06</time> <a href="https://cube-timer-1.vercel.app/">cube timer</a>
