@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Card from '$lib/Card.svelte';
   import '$lib/styles.css';
 </script>
 
@@ -7,17 +8,16 @@
 </header>
 
 <main class="teal">
-  <time datetime="2022-03">2022-03</time> <a href="/16">16 assholes</a> <br />
-  <time datetime="2021-10">2021-10</time> <a href="/snake">snake</a> <br />
-  <time datetime="2021-08">2021-08</time> <a href="/aim">aim trainer</a> <br />
-  <time datetime="2021-08">2021-08</time> <a href="/repos">old portfolio</a> <br />
-  <time datetime="2021-07">2021-07</time> <a href="/bogo">bogo sort</a> <br />
-  <time datetime="2021-07">2021-07</time> <a href="/clock">analog clock</a> <br />
-  <time datetime="2021-07">2021-07</time> <a href="/15">15 puzzle</a> <br />
-  <time datetime="2021-06">2021-06</time> <a href="https://cube-timer-1.vercel.app/">cube timer</a>
-  <br />
-  <time datetime="2021-03">2021-03</time> covid chart (doesn't work anymore) <br />
-  <time datetime="2020-05">2020-05</time> <a href="/time">time online</a> <br />
+  <Card time="2022-03" name="16 assholes" link="/16" />
+  <Card time="2021-10" name="snake" link="/snake" />
+  <Card time="2021-08" name="aim trainer" link="/aim" />
+  <Card time="2021-08" name="old portfolio" link="/repos" />
+  <Card time="2021-07" name="bogo sort" link="/bogo" />
+  <Card time="2021-07" name="analog clock" link="/clock" />
+  <Card time="2021-07" name="15 puzzle" link="/15" />
+  <Card time="2021-06" name="cube timer" link="https://cube-timer-1.vercel.app/" />
+  <Card time="2021-03" name="covid chart (doesn't work anymore)" />
+  <Card time="2020-05" name="time online" link="/time" />
 </main>
 
 <svelte:head>
@@ -101,13 +101,5 @@
   main {
     margin: 0 auto;
     width: max-content;
-  }
-  main a {
-    color: var(--purple);
-    font-weight: bold;
-    text-decoration: none;
-  }
-  main a::after {
-    content: '↗';
   }
 </style>
