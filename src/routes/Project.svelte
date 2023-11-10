@@ -18,6 +18,7 @@
     transition: 150ms all;
     padding: 1rem;
     border-radius: 16px 0;
+    color: var(--purple);
   }
   a:hover {
     background-color: white;
