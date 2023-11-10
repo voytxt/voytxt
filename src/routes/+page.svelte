@@ -46,7 +46,7 @@
 
     --textSize: 6rem;
     --textStrokeWidth: 4px;
-    --textOffsetBottom: -0.33em;
+    --textOffsetBottom: -0.3365em;
     --textOffsetRight: -0.32em;
 
     --numberOfColumns: 3;
