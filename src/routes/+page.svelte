@@ -15,6 +15,7 @@
   </button>
 
   <main class="teal">
+    <Project time="2022-09" name="translator" link="/translator" />
     <Project time="2022-05" name="czechia" link="/czechia" />
     <Project time="2022-03" name="random image" link="/image" />
     <Project time="2022-03" name="16 assholes" link="/16" />
