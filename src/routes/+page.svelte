@@ -17,6 +17,7 @@
     <Project time="2023-05" name="geocaching stats" link="/gcstats" />
     <Project time="2022-09" name="translator" link="/translator" />
     <Project time="2022-05" name="czechia" link="/czechia" />
+    <Project time="2022-05" name="old portfolio 2" link="https://vojta.vercel.app/" />
     <Project time="2022-03" name="random image" link="/image" />
     <Project time="2022-03" name="16 assholes" link="/16" />
     <Project time="2021-10" name="snake" link="/snake" />
