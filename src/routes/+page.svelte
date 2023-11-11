@@ -15,6 +15,7 @@
   </button>
 
   <main class="teal">
+    <Project time="2023-05" name="geocaching stats" link="/gcstats" />
     <Project time="2022-09" name="translator" link="/translator" />
     <Project time="2022-05" name="czechia" link="/czechia" />
     <Project time="2022-03" name="random image" link="/image" />
