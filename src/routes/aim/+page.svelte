@@ -27,6 +27,11 @@
   highlightRandomTile();
 </script>
 
+<svelte:head>
+  <title>Aim Trainer | voytxt</title>
+  <meta name="description" content="Aim your train and stuff" />
+</svelte:head>
+
 <div>{score}</div>
 <main>
   {#each { length: 16 } as _, tile}

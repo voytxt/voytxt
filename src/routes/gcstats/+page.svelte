@@ -24,6 +24,11 @@
   };
 </script>
 
+<svelte:head>
+  <title>gcstats | voytxt</title>
+  <meta name="description" content="Generate a custom html bio for your geocaching profile!" />
+</svelte:head>
+
 <main>
   <h1>gcstats</h1>
 

@@ -64,6 +64,11 @@
   type Square = 'empty';
 </script>
 
+<svelte:head>
+  <title>Snake | voytxt</title>
+  <meta name="description" content="nom nom nom" />
+</svelte:head>
+
 <svelte:window on:keydown={handleKeydown} />
 
 <main>

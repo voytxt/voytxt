@@ -15,6 +15,11 @@
   />
 </main>
 
+<svelte:head>
+  <title>Czechia | voytxt</title>
+  <meta name="description" content="Wait, sorry, what's Czechia? You mean Chechnya?" />
+</svelte:head>
+
 <style>
   h1 {
     text-align: center;

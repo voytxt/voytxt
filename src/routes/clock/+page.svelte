@@ -22,6 +22,11 @@
   });
 </script>
 
+<svelte:head>
+  <title>Clock | voytxt</title>
+  <meta name="description" content="Tick tock." />
+</svelte:head>
+
 <main>
   <div class="h" style="transform: rotate({h}turn)" />
   <div class="m" style="transform: rotate({m}turn)" />

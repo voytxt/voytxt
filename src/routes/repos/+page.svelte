@@ -20,6 +20,11 @@
   };
 </script>
 
+<svelte:head>
+  <title>Repos | voytxt</title>
+  <meta name="description" content="Old portfolio, please don't look" />
+</svelte:head>
+
 <h1>Lmao hi</h1>
 
 <main id="repos">

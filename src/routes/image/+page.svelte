@@ -9,6 +9,11 @@
   }
 </script>
 
+<svelte:head>
+  <title>Random Image | voytxt</title>
+  <meta name="description" content="Like social media, but without the social part" />
+</svelte:head>
+
 <h1>Random Image</h1>
 <h2>NSFW warning!</h2>
 <button on:click={refreshImage}>Get Image</button>

@@ -11,6 +11,11 @@
   const answers = [false, false, false, false];
 </script>
 
+<svelte:head>
+  <title>16 assholes | voytxt</title>
+  <meta name="description" content="The new and improved 16 personalitites test" />
+</svelte:head>
+
 <header>
   <h1>Free Personality Test</h1>
 </header>

@@ -51,6 +51,14 @@
   }
 </script>
 
+<svelte:head>
+  <title>Bogo Sort | voytxt</title>
+  <meta
+    name="description"
+    content="Watch mesmerizing numbers! It's like a lottery, but for poor."
+  />
+</svelte:head>
+
 <div class="outer">
   <div>
     <div>Expected amount of tries on average: {factorial(numberOfElements)}</div>

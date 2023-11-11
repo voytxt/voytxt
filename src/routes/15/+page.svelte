@@ -82,6 +82,11 @@
   type Square = number | null;
 </script>
 
+<svelte:head>
+  <title>15 puzzle | voytxt</title>
+  <meta name="description" content="Great puzzle game, very deep and awesomee!" />
+</svelte:head>
+
 <div class="wrapper">
   <main id="15puzzle">
     {#each squares as square}

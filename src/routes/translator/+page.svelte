@@ -19,6 +19,11 @@
   }
 </script>
 
+<svelte:head>
+  <title>Translator | voytxt</title>
+  <meta name="description" content="The best translator in the world" />
+</svelte:head>
+
 <h1>Translator</h1>
 
 <main>
