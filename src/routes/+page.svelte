@@ -1,5 +1,4 @@
 <script lang="ts">
-  import '$lib/styles.css';
   import Project from './Project.svelte';
 
   let clicks = 0;
