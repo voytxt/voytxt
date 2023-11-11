@@ -10,7 +10,7 @@
   <footer>
     <small>
       &copy; {new Date().getFullYear()} voytxt <br /> <a href="/">website</a> |
-      <a href="https://github.com/vojta-dev">github</a>
+      <a href="https://github.com/voytxt">github</a>
     </small>
   </footer>
 </div>

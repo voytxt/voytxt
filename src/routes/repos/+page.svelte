@@ -1,6 +1,6 @@
 <script lang="ts">
   async function fetchRepos(): Promise<Repo[]> {
-    const response = await fetch('https://api.github.com/users/vojta-dev/repos');
+    const response = await fetch('https://api.github.com/users/voytxt/repos');
     const repos: Repo[] = await response.json();
 
     return repos
