@@ -22,5 +22,8 @@
     "typescript": "^5.2.2",
     "vite": "^4.5.0"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "wretch": "^2.7.0"
+  }
 }
