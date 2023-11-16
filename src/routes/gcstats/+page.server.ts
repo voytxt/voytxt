@@ -47,7 +47,10 @@ async function getUser(username: string): Promise<{ id: string; llh: string }> {
   return { id: id!, llh: llh! };
 }
 
-async function getDtChart(id: string, llh: string): Promise<{ chart: number[][]; combinations: number }> {
+async function getDtChart(
+  id: string,
+  llh: string,
+): Promise<{ chart: number[][]; combinations: number }> {
   const dtChart = await api
     .url('/ajax/profilestats.php')
     .formUrl({
@@ -65,7 +68,9 @@ async function getDtChart(id: string, llh: string): Promise<{ chart: number[][];
     throw new Error('Undefined D/T chart');
   }
 
-  const chartArray = chart.slice(0, 81).map((element) => (element === '&nbsp;' ? 0 : parseInt(element)));
+  const chartArray = chart
+    .slice(0, 81)
+    .map((element) => (element === '&nbsp;' ? 0 : parseInt(element)));
 
   const chart2d: number[][] = [];
 

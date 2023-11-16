@@ -41,7 +41,7 @@
     'flex-direction:column',
     'align-items:center',
     'margin-bottom:1rem',
-    'min-width:442px'
+    'min-width:442px',
   )}
 >
   <table style={s('border2', 'collapse', 'monospace', 'center', 'medium')}>
