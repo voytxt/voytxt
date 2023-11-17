@@ -36,8 +36,8 @@
 </script>
 
 <svelte:head>
-  <title>Aim Trainer | voytxt</title>
-  <meta name="description" content="Aim your train and stuff" />
+  <title>Password Generator | voytxt</title>
+  <meta name="description" content="Correct Horse Battery Staple" />
 </svelte:head>
 
 <div class="outer">
