@@ -17,6 +17,8 @@ export const actions = {
 
     const data = await gcResponse.text();
 
+    const isPremium = matchData(/Premium Member Only Cache/) !== null;
+
     function matchData(regex: RegExp, index = 0): string | null {
       const matches = data.match(regex);
       return matches === null ? null : matches[index];
@@ -26,14 +28,23 @@ export const actions = {
       success: true,
       data: {
         name: matchData(
-          /(?<=<div id="divContentMain" class="span-24&#32;last">\s*<h1 class="visually-hidden">).{1,70}(?=<\/h1>)/,
+          isPremium
+            ? /(?<=<h1 class="heading-3">).{1,70}(?=<\/h1>)/
+            : /(?<=<span id="ctl00_ContentBody_CacheName" class="tex2jax_ignore">).{1,70}(?=<\/span>)/,
         ),
-        link:
-          'https://www.geocaching.com' +
-          matchData(/(?<=<form method="post" action=")\/geocache\/.{1,60}(?=" id="aspnetForm">)/),
-        difficulty: matchData(/(?<=alt=").{1,3}(?= out of 5")/),
-        terrain: matchData(/(?<=alt=").{1,3}(?= out of 5")/g, 1),
-        size: matchData(/(?<=&nbsp<small>\().{1,20}(?=\)<\/small><\/span>)/),
+        difficulty: matchData(
+          isPremium
+            ? /(?<=Difficulty<\/span>\s*<span>).{1,3}(?=<\/span>)/
+            : /(?<=alt=").{1,3}(?= out of 5")/,
+        ),
+        terrain: isPremium
+          ? matchData(/(?<=Terrain<\/span>\s*<span>).{1,3}(?=<\/span>)/)
+          : matchData(/(?<=alt=").{1,3}(?= out of 5")/g, 1),
+        size: matchData(
+          isPremium
+            ? /(?<=Size<\/span>\s*<span>).{1,20}(?=<\/span>)/
+            : /(?<=&nbsp<small>\().{1,20}(?=\)<\/small><\/span>)/,
+        ),
       },
     };
   },
