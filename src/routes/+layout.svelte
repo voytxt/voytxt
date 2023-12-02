@@ -24,6 +24,7 @@
     margin: 0;
   }
 
+  /* https://github.com/sveltejs/svelte/issues/9398 */
   :global(body:has(.teal)) {
     background-color: var(--teal);
   }
