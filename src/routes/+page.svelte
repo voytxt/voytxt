@@ -3,7 +3,7 @@
 
   let clicks = 0;
 
-  $: if (clicks > 15) {
+  $: if (clicks === 15) {
     location.assign('https://google.com/search?q=cute+cat+pics');
   }
 </script>
