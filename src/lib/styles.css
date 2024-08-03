@@ -1,5 +1,4 @@
 /* using properties instead of variables, so we can use a hover transition on the gradient */
-/* not supported in Firefox */
 @property --purple {
   syntax: '<color>';
   initial-value: purple;
