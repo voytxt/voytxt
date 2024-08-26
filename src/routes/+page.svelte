@@ -14,6 +14,7 @@
   </button>
 
   <main class="teal">
+    <Project time="2024-??" name="cube timer" link="https://timer.voytxt.com/" />
     <Project time="2023-07" name="pickle hunt" link="https://github.com/voytxt/pickle-hunt" />
     <Project time="2023-05" name="geocaching stats" link="/gcstats" />
     <Project time="2023-02" name="geocache lookup" link="/gc" />
@@ -35,7 +36,7 @@
     <Project time="2021-07" name="bogo sort" link="/bogo" />
     <Project time="2021-07" name="analog clock" link="/clock" />
     <Project time="2021-07" name="15 puzzle" link="/15" />
-    <Project time="2021-06" name="cube timer" link="https://cube-timer-1.vercel.app/" />
+    <Project time="2021-06" name="old cube timer" link="https://cube-timer-1.vercel.app/" />
     <!-- <Project time="2021-03" name="covid chart" link="" /> -->
     <Project time="2020-05" name="time online" link="/time" />
   </main>

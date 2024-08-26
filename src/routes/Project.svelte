@@ -6,7 +6,7 @@
 
 <a href={link}>
   <time datetime={time}>{time}</time>
-  <span>{name} ↗</span>
+  <span>{name} <span class="arrow">↗</span></span>
 </a>
 
 <style>
@@ -19,6 +19,7 @@
     padding: 1rem;
     border-radius: 16px 0;
     color: var(--purple);
+    font-family: 'SomeType Mono', monospace;
   }
   a:hover {
     background-color: white;
@@ -29,5 +30,11 @@
     color: var(--purple);
     font-weight: bold;
     text-decoration: none;
+  }
+
+  a span .arrow {
+    position: relative;
+    bottom: 0.25rem;
+    right: 0.25rem;
   }
 </style>
