@@ -1,13 +1,12 @@
 <script lang="ts">
   import { enhance } from '$app/forms';
   import type { SubmitFunction } from '@sveltejs/kit';
-  import type { ActionData } from './$types';
 
-  export let form: ActionData;
+  const { form } = $props();
 
-  let started = false;
-  let loading = false;
-  let gcCode = '';
+  let started = $state(false);
+  let loading = $state(false);
+  let gcCode = $state('');
 
   const submit: SubmitFunction = () => {
     started = true;
@@ -29,7 +28,7 @@
 
 <form method="POST" use:enhance={submit}>
   <span>GC</span>
-  <!-- svelte-ignore a11y-autofocus -->
+  <!-- svelte-ignore a11y_autofocus -->
   <input bind:value={gcCode} name="gcCode" maxlength="6" autofocus />
 </form>
 

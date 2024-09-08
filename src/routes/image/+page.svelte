@@ -1,7 +1,7 @@
 <script lang="ts">
   import db from './db.json';
 
-  let imageURL = '';
+  let imageURL = $state('');
 
   function refreshImage() {
     imageURL = db[Math.floor(Math.random() * db.length)];
@@ -16,10 +16,10 @@
 
 <h1>Random Image</h1>
 <h2>NSFW warning!</h2>
-<button on:click={refreshImage}>Get Image</button>
+<button onclick={refreshImage}>Get Image</button>
 
 {#if imageURL !== ''}
-  <!-- svelte-ignore a11y-missing-attribute -->
+  <!-- svelte-ignore a11y_missing_attribute -->
   <img src={imageURL} />
 {/if}
 

@@ -8,6 +8,7 @@
 </svelte:head>
 
 <div>
+  <!-- svelte-ignore slot_element_deprecated -->
   <slot />
 </div>
 

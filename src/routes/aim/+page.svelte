@@ -1,6 +1,6 @@
 <script lang="ts">
-  let score = 0;
-  let highlightedTiles: number[] = [];
+  let score = $state(0);
+  let highlightedTiles: number[] = $state([]);
 
   function highlightRandomTile() {
     let randomTile: number;
@@ -35,10 +35,8 @@
 <div>{score}</div>
 <main>
   {#each { length: 16 } as _, tile}
-    <button
-      class:highlighted={highlightedTiles.includes(tile)}
-      on:click={() => handleClick(tile)}
-    />
+    <button class:highlighted={highlightedTiles.includes(tile)} onclick={() => handleClick(tile)}
+    ></button>
   {/each}
 </main>
 

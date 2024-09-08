@@ -1,9 +1,9 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
-  let h = 0;
-  let m = 0;
-  let s = 0;
+  let h = $state(0);
+  let m = $state(0);
+  let s = $state(0);
 
   function update() {
     const date = new Date();
@@ -28,9 +28,9 @@
 </svelte:head>
 
 <main>
-  <div class="h" style="transform: rotate({h}turn)" />
-  <div class="m" style="transform: rotate({m}turn)" />
-  <div class="s" style="transform: rotate({s}turn)" />
+  <div class="h" style="transform: rotate({h}turn)"></div>
+  <div class="m" style="transform: rotate({m}turn)"></div>
+  <div class="s" style="transform: rotate({s}turn)"></div>
 </main>
 
 <footer>

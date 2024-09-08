@@ -12,7 +12,7 @@
   <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5283158.680158322!2d10.988618292113015!3d49.71706447082004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b948fd7dd8243%3A0xf8661c75d3db586f!2sCzechia!5e0!3m2!1sen!2scz!4v1652629940756!5m2!1sen!2scz"
     title="Czechia on Google Maps"
-  />
+  ></iframe>
 </main>
 
 <svelte:head>

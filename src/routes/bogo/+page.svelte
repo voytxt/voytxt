@@ -1,14 +1,14 @@
 <script lang="ts">
-  let array: number[] = [];
-  let numberOfElements = 5;
-  let sorted = false;
+  let array: number[] = $state([]);
+  let numberOfElements = $state(5);
+  let sorted = $state(false);
 
-  let tries = 0;
-  let minTries = Infinity;
-  let maxTries = 0;
+  let tries = $state(0);
+  let minTries = $state(Number.POSITIVE_INFINITY);
+  let maxTries = $state(0);
 
-  let running = false;
-  let refreshDelay = 0;
+  let running = $state(false);
+  let refreshDelay = $state(0);
 
   function start() {
     running = true;
@@ -72,7 +72,7 @@
     <div>Number of elements: <input type="number" bind:value={numberOfElements} /></div>
   </div>
 
-  <button on:click={() => (running ? stop() : start())}>{running ? 'Stop' : 'Start'}</button>
+  <button onclick={() => (running ? stop() : start())}>{running ? 'Stop' : 'Start'}</button>
 
   <div class="array" style="color: {sorted ? 'limegreen' : 'black'}">{array.join(' ')}</div>
 </div>

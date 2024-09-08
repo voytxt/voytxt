@@ -1,14 +1,14 @@
 <script lang="ts">
   import ass from './ass.png';
 
-  const questions = [
+  const questions = $state([
     'Your opinion is always correct',
     'You regularly interrupt other people',
     'You want to kill other people when they disagree with your opinion',
     'You like Roblox',
-  ];
+  ]);
 
-  const answers = [false, false, false, false];
+  const answers = $state([false, false, false, false]);
 </script>
 
 <svelte:head>
@@ -32,7 +32,7 @@
   {#each questions as question, i}
     <div>
       <h2>{question}</h2>
-      <button on:click={() => (answers[i] = true)} class:green={answers[i]} />
+      <button onclick={() => (answers[i] = true)} class:green={answers[i]}></button>
       <span>Yes</span>
     </div>
   {/each}

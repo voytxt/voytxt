@@ -1,7 +1,5 @@
 <script lang="ts">
-  export let time: string;
-  export let link: string;
-  export let name: string;
+  const { time, link, name }: { time: string; link: string; name: string } = $props();
 </script>
 
 <a href={link}>

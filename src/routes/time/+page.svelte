@@ -1,9 +1,13 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
-  let h = '00';
-  let m = '00';
-  let s = '00';
+  let h = $state(0);
+  let m = $state(0);
+  let s = $state(0);
+
+  let H = $derived(h.toString().padStart(2, '0'));
+  let M = $derived(m.toString().padStart(2, '0'));
+  let S = $derived(s.toString().padStart(2, '0'));
 
   onMount(() => {
     requestAnimationFrame(getAndSetTime);
@@ -12,9 +16,9 @@
   function getAndSetTime() {
     const date = new Date();
 
-    h = date.getHours().toString().padStart(2, '0');
-    m = date.getMinutes().toString().padStart(2, '0');
-    s = date.getSeconds().toString().padStart(2, '0');
+    h = date.getHours();
+    m = date.getMinutes();
+    s = date.getSeconds();
 
     requestAnimationFrame(getAndSetTime);
   }
@@ -28,7 +32,7 @@
   />
 </svelte:head>
 
-<h1>{h}:{m}:{s}</h1>
+<h1>{H}:{M}:{S}</h1>
 
 <style>
   h1 {

@@ -9,7 +9,7 @@ export const actions = {
       return fail(500, { success: false, error: 'GC Code is invalid' });
     }
 
-    const gcResponse = await fetch('https://www.geocaching.com/geocache/GC' + gcCode);
+    const gcResponse = await fetch(`https://www.geocaching.com/geocache/GC${gcCode}`);
 
     if (!gcResponse.ok) {
       return fail(500, { success: false, error: "Couldn't find cache" });

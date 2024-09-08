@@ -1,8 +1,8 @@
 <script lang="ts">
   import { LANGUAGES, WORDS } from './db';
 
-  let input = '';
-  let translation = 'Translation';
+  let input = $state('');
+  let translation = $state('Translation');
 
   function handleClick() {
     const numberOfWords = input.split(/\s+/g).filter((s) => s !== '').length;
@@ -10,7 +10,7 @@
     translation = numberOfWords === 0 ? 'Translation' : '';
 
     for (let i = 0; i < numberOfWords; i++) {
-      translation += getRandomWord() + ' ';
+      translation += `${getRandomWord()} `;
     }
   }
 
@@ -38,10 +38,10 @@
   </div>
 
   <div>
-    <textarea bind:value={input} />
+    <textarea bind:value={input}></textarea>
   </div>
 
-  <button on:click={handleClick}>TRANSLATE</button>
+  <button onclick={handleClick}>TRANSLATE</button>
 
   <div class="translation">{translation}</div>
 </main>

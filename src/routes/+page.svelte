@@ -1,15 +1,17 @@
 <script lang="ts">
   import Project from './Project.svelte';
 
-  let clicks = 0;
+  let clicks = $state(0);
 
-  $: if (clicks === 15) {
-    location.assign('https://google.com/search?q=cute+cat+pics');
-  }
+  $effect(() => {
+    if (clicks === 15) {
+      location.assign('https://google.com/search?q=cute+cat+pics');
+    }
+  });
 </script>
 
 <div class="outer">
-  <button on:click={() => clicks++}>
+  <button onclick={() => clicks++}>
     <h1>voytxt</h1>
   </button>
 

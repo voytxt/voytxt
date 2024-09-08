@@ -1,28 +1,19 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
-  let squares: Square[] = [];
+  const squares: Square[] = $state([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, null]);
 
-  $: emptySquareIndex = squares.findIndex((s) => s === null);
-  $: isSolved = squares
-    .slice(0, -1) // last square should be null
-    .every((s, i) => s === i + 1);
+  const emptySquareIndex = $derived(squares.findIndex((s) => s === null));
+  const isSolved = $derived(
+    squares
+      .slice(0, -1) // last square should be null
+      .every((s, i) => s === i + 1),
+  );
 
-  onMount(() => {
-    squares = shuffle();
-  });
+  onMount(() => shuffle());
 
-  function shuffle(): Square[] {
-    const squares: Square[] = [null, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-
-    const shuffle = () => {
-      for (let i = 15; i > 0; i--) {
-        const randomIndex = Math.floor(Math.random() * (i + 1));
-        [squares[i], squares[randomIndex]] = [squares[randomIndex], squares[i]];
-      }
-    };
-
-    // https://web.archive.org/web/20200614210106/https://www.cs.bham.ac.uk/~mdr/teaching/modules04/java2/TilesSolvability.html
+  // https://web.archive.org/web/20200614210106/https://www.cs.bham.ac.uk/~mdr/teaching/modules04/java2/TilesSolvability.html
+  function shuffle() {
     const isSolvable = () => {
       let inversions = 0;
 
@@ -43,27 +34,17 @@
       return emptySquareRowIndex % 2 !== inversions % 2;
     };
 
-    while (true) {
-      shuffle();
-
-      if (isSolvable()) {
-        return squares;
+    do {
+      for (let i = 15; i > 0; i--) {
+        const randomIndex = Math.floor(Math.random() * (i + 1));
+        [squares[i], squares[randomIndex]] = [squares[randomIndex], squares[i]];
       }
-    }
+    } while (!isSolvable());
   }
 
   function handleClick(square: Square) {
-    console.log(square, 'clicked');
+    const squareIndex = squares.findIndex((s) => s === square);
 
-    const squareIndex = getSquareIndex(square);
-
-    if (isValidMove(squareIndex)) {
-      squares[squareIndex] = null;
-      squares[emptySquareIndex] = square;
-    }
-  }
-
-  function isValidMove(squareIndex: number) {
     const sameRow = Math.floor(squareIndex / 4) === Math.floor(emptySquareIndex / 4);
     const sameColumn = squareIndex % 4 === emptySquareIndex % 4;
 
@@ -72,11 +53,11 @@
     const right = squareIndex + 1 === emptySquareIndex;
     const left = squareIndex - 1 === emptySquareIndex;
 
-    return (sameRow || sameColumn) && (up || down || right || left);
-  }
-
-  function getSquareIndex(square: Square) {
-    return squares.findIndex((s) => s === square);
+    // is move valid
+    if ((sameRow || sameColumn) && (up || down || right || left)) {
+      squares[emptySquareIndex] = square;
+      squares[squareIndex] = null;
+    }
   }
 
   type Square = number | null;
@@ -88,21 +69,19 @@
 </svelte:head>
 
 <div class="wrapper">
-  <main id="15puzzle">
+  <main>
     {#each squares as square}
       {#if square !== null}
-        <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <!-- svelte-ignore a11y-no-static-element-interactions -->
-        <div class="square" class:green={isSolved} on:click={() => handleClick(square)}>
+        <button class="square" class:green={isSolved} onclick={() => handleClick(square)}>
           {square}
-        </div>
+        </button>
       {:else}
-        <div class="square empty" />
+        <button class="square empty"></button>
       {/if}
     {/each}
   </main>
 
-  <button id="shuffle" on:click={() => (squares = shuffle())}>Shuffle</button>
+  <button id="shuffle" onclick={shuffle}>Shuffle</button>
 </div>
 
 <style>

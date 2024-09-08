@@ -1,13 +1,13 @@
 <script lang="ts">
   import { enhance } from '$app/forms';
-  import type { ActionData, SubmitFunction } from './$types';
+  import type { SubmitFunction } from './$types';
   import Chart from './Chart.svelte';
 
-  export let form: ActionData;
+  const { form } = $props();
 
-  let started = false;
-  let loading = false;
-  let chart: HTMLElement;
+  let started = $state(false);
+  let loading = $state(false);
+  let chart: HTMLElement | null = $state(null);
 
   const submit: SubmitFunction = () => {
     started = true;
@@ -20,7 +20,7 @@
   };
 
   const copy = () => {
-    navigator.clipboard.writeText(chart.innerHTML);
+    navigator.clipboard.writeText(chart!.innerHTML);
   };
 </script>
 
@@ -41,7 +41,7 @@
     {#if loading}
       Loading...
     {:else if form?.success && form.data !== undefined}
-      <button on:click={copy}>Copy HTML</button>
+      <button onclick={copy}>Copy HTML</button>
 
       <figure bind:this={chart}>
         <Chart chart={form.data} />

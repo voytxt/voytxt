@@ -70,7 +70,7 @@ async function getDtChart(
 
   const chartArray = chart
     .slice(0, 81)
-    .map((element) => (element === '&nbsp;' ? 0 : parseInt(element)));
+    .map((element) => (element === '&nbsp;' ? 0 : Number.parseInt(element)));
 
   const chart2d: number[][] = [];
 
@@ -80,6 +80,6 @@ async function getDtChart(
 
   return {
     chart: chart2d,
-    combinations: parseInt(dtCombinations!),
+    combinations: Number.parseInt(dtCombinations!),
   };
 }

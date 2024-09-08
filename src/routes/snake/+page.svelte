@@ -3,17 +3,32 @@
 
   const GRID_SIZE = 30;
 
-  const grid: Square[][] = Array(GRID_SIZE)
-    .fill(null)
-    .map(() => Array(GRID_SIZE).fill('empty'));
+  const grid: 'empty'[][] = $state(
+    Array(GRID_SIZE)
+      .fill(null)
+      .map(() => Array(GRID_SIZE).fill('empty')),
+  );
 
-  let snake: [number, number][] = [[Math.floor(GRID_SIZE / 2), Math.floor(GRID_SIZE / 2)]];
-  let snakeDirection = [1, 0];
+  let snake: [number, number][] = $state([[Math.floor(GRID_SIZE / 2), Math.floor(GRID_SIZE / 2)]]);
+  let snakeDirection = $state([1, 0]);
 
-  let food: [number, number] = newFood();
+  let food: [number, number] = $state(newFood());
+
+  const gridWithSnakeAndFood = $derived(
+    grid.map((row, i) => {
+      return row.map((square, j) => {
+        if (snake.some(([x, y]) => x === i && y === j)) return 'snake';
+        if (food[0] === i && food[1] === j) return 'food';
+        return square;
+      });
+    }),
+  );
 
   const interval = setInterval(() => {
-    snake = [[snake[0][0] + snakeDirection[0], snake[0][1] + snakeDirection[1]], ...snake];
+    const snakeHeadSquare =
+      gridWithSnakeAndFood[snake[0][0] + snakeDirection[0]]?.[snake[0][1] + snakeDirection[1]];
+
+    snake.unshift([snake[0][0] + snakeDirection[0], snake[0][1] + snakeDirection[1]]);
 
     if (snake[0][0] === food[0] && snake[0][1] === food[1]) {
       food = newFood();
@@ -21,21 +36,12 @@
       snake = snake.slice(0, -1);
     }
 
-    const snakeHeadSquare = gridWithSnakeAndFood[snake[0][0]]?.[snake[0][1]];
     if (snakeHeadSquare !== 'empty' && snakeHeadSquare !== 'food') {
       clearInterval(interval);
       alert('You died!');
       location.reload();
     }
   }, 100);
-
-  $: gridWithSnakeAndFood = grid.map((row, i) => {
-    return row.map((square, j) => {
-      if (snake.some(([x, y]) => x === i && y === j)) return 'snake';
-      if (food[0] === i && food[1] === j) return 'food';
-      return square;
-    });
-  });
 
   onDestroy(() => {
     clearInterval(interval);
@@ -60,8 +66,6 @@
       snakeDirection = newDirection;
     }
   }
-
-  type Square = 'empty';
 </script>
 
 <svelte:head>
@@ -69,12 +73,12 @@
   <meta name="description" content="nom nom nom" />
 </svelte:head>
 
-<svelte:window on:keydown={handleKeydown} />
+<svelte:window onkeydown={handleKeydown} />
 
 <main>
   <div id="snake" style="grid-template: repeat({GRID_SIZE}, 1.5rem) / repeat({GRID_SIZE}, 1.5rem)">
     {#each gridWithSnakeAndFood.flat() as type, i (i)}
-      <div class={type} />
+      <div class={type}></div>
     {/each}
   </div>
 </main>

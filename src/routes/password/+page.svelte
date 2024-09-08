@@ -2,12 +2,12 @@
   import { onMount } from 'svelte';
   import { longWords, mediumWords } from './words';
 
-  let password = '';
-  let hidePassword = false;
+  let password = $state('');
+  let hidePassword = $state(false);
   let timeout: number;
 
-  let numberOfWords = 4;
-  let lengthOfWords: 'medium' | 'long' = 'medium';
+  let numberOfWords = $state(4);
+  let lengthOfWords: 'medium' | 'long' = $state('medium');
 
   function generatePassword() {
     const words = { medium: mediumWords, long: longWords }[lengthOfWords];
@@ -44,31 +44,31 @@
   <h1>Password Generator, but with actual words</h1>
 
   <div class="button">
-    <button on:click={generatePassword}>Generate</button>
+    <button onclick={generatePassword}>Generate</button>
   </div>
 
   <label>
     {numberOfWords}
     {numberOfWords === 1 ? 'word' : 'words'}
-    <input type="range" bind:value={numberOfWords} on:input={generatePassword} min="1" max="10" />
+    <input type="range" bind:value={numberOfWords} oninput={generatePassword} min="1" max="10" />
   </label>
 
   <label>
     Length of words
-    <select bind:value={lengthOfWords} on:input={() => setTimeout(generatePassword)}>
+    <select bind:value={lengthOfWords} oninput={() => setTimeout(generatePassword)}>
       <option value="medium">Medium (5-8 letters)</option>
       <option value="long">Long (9+ letters)</option>
     </select>
   </label>
 
   <div class="password">
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-    <!-- svelte-ignore a11y-no-static-element-interactions -->
+    <!-- svelte-ignore a11y_click_events_have_key_events -->
+    <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
+    <!-- svelte-ignore a11y_no_static_element_interactions -->
     <span
       class:hidden={hidePassword}
-      on:click={copyPassword}
-      on:focus={copyPassword}
+      onclick={copyPassword}
+      onfocus={copyPassword}
       tabindex="0"
       title="Copy"
     >
