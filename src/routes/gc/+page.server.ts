@@ -27,6 +27,7 @@ export const actions = {
     return {
       success: true,
       data: {
+        gcCode,
         name: matchData(
           isPremium
             ? /(?<=<h1 class="heading-3">).{1,70}(?=<\/h1>)/

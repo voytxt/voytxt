@@ -36,7 +36,7 @@
   {#if loading}
     <h2>Loading...</h2>
   {:else if form?.success && form.data !== undefined}
-    {@const { name, difficulty, terrain, size } = form.data}
+    {@const { gcCode, name, difficulty, terrain, size } = form.data}
 
     <div class="cache">
       <h2><a href="https://coord.info/GC{gcCode}">{name}</a></h2>
