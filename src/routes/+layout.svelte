@@ -1,11 +1,12 @@
 <script lang="ts">
   import '$lib/styles.css';
+
+  const { children } = $props();
 </script>
 
 <div>
   <main>
-    <!-- svelte-ignore slot_element_deprecated -->
-    <slot />
+    {@render children()}
   </main>
 
   <footer>

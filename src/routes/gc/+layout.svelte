@@ -1,3 +1,7 @@
+<script lang="ts">
+  const { children } = $props();
+</script>
+
 <svelte:head>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -8,8 +12,7 @@
 </svelte:head>
 
 <div>
-  <!-- svelte-ignore slot_element_deprecated -->
-  <slot />
+  {@render children()}
 </div>
 
 <style>
