@@ -34,5 +34,7 @@
     position: relative;
     bottom: 0.25rem;
     right: 0.25rem;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 700;
   }
 </style>
