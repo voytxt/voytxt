@@ -32,7 +32,8 @@
   {#each questions as question, i}
     <div>
       <h2>{question}</h2>
-      <button onclick={() => (answers[i] = true)} class:green={answers[i]}></button>
+      <button onclick={() => (answers[i] = true)} class:green={answers[i]} aria-label="Yes"
+      ></button>
       <span>Yes</span>
     </div>
   {/each}

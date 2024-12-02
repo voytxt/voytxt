@@ -35,6 +35,7 @@
 <div>{score}</div>
 <main>
   {#each { length: 16 } as _, tile}
+    <!-- svelte-ignore a11y_consider_explicit_label -->
     <button class:highlighted={highlightedTiles.includes(tile)} onclick={() => handleClick(tile)}
     ></button>
   {/each}

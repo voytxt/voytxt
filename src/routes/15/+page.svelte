@@ -76,7 +76,7 @@
           {square}
         </button>
       {:else}
-        <button class="square empty"></button>
+        <button class="square empty" aria-label="empty"></button>
       {/if}
     {/each}
   </main>
