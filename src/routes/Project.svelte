@@ -4,37 +4,37 @@
 
 <a href={link}>
   <time datetime={time}>{time}</time>
-  <span>{name} <span class="arrow">↗</span></span>
+  <span>{name}<span class="arrow">↗</span></span>
 </a>
 
 <style>
   a {
     display: block;
     text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.5);
-    outline: 4px solid transparent;
-    transition: 150ms all;
+    transition: all 100ms ease-out;
     padding: 1rem;
-    border-radius: 16px 0;
-    color: var(--purple);
+    color: white;
     font-family: 'SomeType Mono', monospace;
-  }
-  a:hover {
-    background-color: white;
-    outline-color: var(--orange);
-  }
+    border-left: 1px solid #fffa;
 
-  a span {
-    color: var(--purple);
-    font-weight: bold;
-    text-decoration: none;
-  }
+    &:hover,
+    &:focus {
+      border-color: white;
+      border-width: 5px;
+      padding-right: 0.75rem;
+    }
 
-  a span .arrow {
-    position: relative;
-    bottom: 0.25rem;
-    right: 0.25rem;
-    font-family: 'Source Code Pro', monospace;
-    font-weight: 700;
+    span {
+      font-weight: bold;
+
+      .arrow {
+        font-family: 'Source Code Pro', monospace;
+        position: relative;
+        bottom: 0.25rem;
+        right: -0.25rem;
+        font-weight: 700;
+        user-select: none;
+      }
+    }
   }
 </style>
