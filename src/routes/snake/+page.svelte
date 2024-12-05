@@ -49,7 +49,9 @@
 
   function newFood(): [number, number] {
     const randomNum = () => Math.floor(Math.random() * GRID_SIZE);
-    return [randomNum(), randomNum()];
+    const food: [number, number] = [randomNum(), randomNum()];
+
+    return snake.some(([x, y]) => x === food[0] && y === food[1]) ? newFood() : food;
   }
 
   function handleKeydown(event: KeyboardEvent) {
