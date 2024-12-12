@@ -36,6 +36,7 @@
   <h1>voytxt</h1>
 
   <main>
+    <Project time="2024-12" name="low-budget desmos" link="/desmos" />
     <Project time="2024-??" name="cube timer" link="https://timer.voytxt.com/" />
     <Project time="2023-07" name="pickle hunt" link="https://picklehunt.voytxt.com" />
     <Project time="2023-05" name="geocaching stats" link="/gcstats" />
