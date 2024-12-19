@@ -68,6 +68,7 @@
 <svelte:head>
   <title>voytxt</title>
   <meta name="description" content="Click for cat pics!" />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/65811166" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
