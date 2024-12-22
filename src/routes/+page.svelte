@@ -45,6 +45,7 @@
     <Project time="2022-12" name="popeláři" link="https://github.com/voytxt/popelari" />
     <Project time="2022-09" name="translator" link="/translator" />
     <Project time="2022-09" name="TLGE2 explorer" link="https://tlge2.vercel.app/" />
+    <Project time="2022-09" name="more or less" link="/mol" />
     <Project time="2022-05" name="bio changer" link="https://github.com/voytxt/about-me-changer" />
     <Project time="2022-05" name="czechia" link="/czechia" />
     <Project time="2022-05" name="old portfolio 2" link="https://vojta.vercel.app/" />
