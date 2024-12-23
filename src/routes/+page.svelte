@@ -131,6 +131,10 @@
       color: white;
       fill: currentColor;
       width: 32px;
+
+      &:hover {
+        color: #fffc;
+      }
     }
   }
 
