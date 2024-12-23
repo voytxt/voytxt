@@ -11,7 +11,7 @@
   a {
     display: block;
     text-decoration: none;
-    transition: all 100ms ease-out;
+    transition: border-left 100ms ease-out;
     padding: 1rem;
     color: white;
     font-family: 'SomeType Mono', monospace;
@@ -22,6 +22,15 @@
       border-color: white;
       border-width: 5px;
       padding-right: 0.75rem;
+
+      time {
+        color: white;
+      }
+    }
+
+    time {
+      transition: color 100ms ease-out;
+      color: #fffa;
     }
 
     span {

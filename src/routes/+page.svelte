@@ -36,10 +36,12 @@
   <h1>voytxt</h1>
 
   <main>
+    <Project time="eternal" name="voytxt" link="/" />
+    <Project time="eternal" name="robtop bot" link="https://github.com/voytxt/robtop-bot" />
+    <Project time="eternal" name="cube timer" link="https://timer.voytxt.com/" />
+    <Project time="eternal" name="pickle hunt" link="https://picklehunt.voytxt.com" />
+    <Project time="eternal" name="geocaching stats" link="/gcstats" />
     <Project time="2024-12" name="low-budget desmos" link="/desmos" />
-    <Project time="2024-??" name="cube timer" link="https://timer.voytxt.com/" />
-    <Project time="2023-07" name="pickle hunt" link="https://picklehunt.voytxt.com" />
-    <Project time="2023-05" name="geocaching stats" link="/gcstats" />
     <Project time="2023-02" name="geocache lookup" link="/gc" />
     <Project time="2023-02" name="flashlight" link="https://github.com/voytxt/flashlight" />
     <Project time="2022-12" name="popeláři" link="https://github.com/voytxt/popelari" />
@@ -53,7 +55,6 @@
     <Project time="2022-03" name="random image" link="/image" />
     <Project time="2022-03" name="16 assholes" link="/16" />
     <Project time="2022-02" name="password generator" link="/password" />
-    <Project time="2022-02" name="robtop bot" link="https://github.com/voytxt/robtop-bot" />
     <Project time="2021-10" name="snake" link="/snake" />
     <Project time="2021-08" name="aim trainer" link="/aim" />
     <Project time="2021-08" name="old portfolio" link="/repos" />
