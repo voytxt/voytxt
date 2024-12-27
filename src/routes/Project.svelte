@@ -11,17 +11,16 @@
   a {
     display: block;
     text-decoration: none;
-    transition: border-left 100ms ease-out;
+    transition: all 100ms ease-out;
     padding: 1rem;
     color: white;
     font-family: 'SomeType Mono', monospace;
-    border-left: 1px solid #fffa;
+    box-shadow: -1px 0 #fffa;
 
     &:hover,
     &:focus {
-      border-color: white;
-      border-width: 5px;
-      padding-right: 0.75rem;
+      box-shadow: -5px 0 white;
+      transform: translateX(4px);
 
       time {
         color: white;
