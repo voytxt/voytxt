@@ -40,6 +40,7 @@
     <Project time="eternal" name="cube timer" link="https://timer.voytxt.com/" />
     <Project time="eternal" name="pickle hunt" link="https://picklehunt.voytxt.com" />
     <Project time="eternal" name="geocaching stats" link="/gcstats" />
+    <Project time="2024-12" name="&pi;" link="/pi" />
     <Project time="2024-12" name="robtop bot" link="https://bsky.app/profile/robtop.voytxt.com" />
     <Project time="2024-12" name="stacker stats" link="https://stackerstats.voytxt.com" />
     <Project time="2024-12" name="low-budget desmos" link="/desmos" />
