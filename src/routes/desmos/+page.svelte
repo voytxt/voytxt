@@ -72,6 +72,9 @@
 </div>
 
 <svelte:head>
+  <title>Bootleg Desmos | voytxt</title>
+  <meta name="description" content="It's like Desmos except with less features and more bugs" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
   <link

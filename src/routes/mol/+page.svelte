@@ -22,6 +22,14 @@
   }
 </script>
 
+<svelte:head>
+  <title>More or Less | voytxt</title>
+  <meta
+    name="description"
+    content="Practice your MoL skills (very useful in every-day situations)"
+  />
+</svelte:head>
+
 <div class="outer">
   <h1>More or Less</h1>
 

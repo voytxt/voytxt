@@ -14,6 +14,11 @@
   }
 </script>
 
+<svelte:head>
+  <title>100 digits of pi | voytxt</title>
+  <meta name="description" content="neeeerd" />
+</svelte:head>
+
 <svelte:window onkeydown={handleKeyDown} />
 
 <h1>Type 100 digits of &pi;</h1>
