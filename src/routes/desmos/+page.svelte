@@ -68,6 +68,7 @@
   <pre>{SIZE / 4}/tan(x)</pre>
   <pre>tan(x*pi)*x</pre>
   <pre>sin({SIZE}/x)*tan(x*pi)*x</pre>
+  <pre>100*(sin(x)*sqrt(5-x*x/2e4)+sqrt(abs(x/100))-.5)</pre>
   <small>do you have more? message me on discord (@voytxt) and i may add them lol</small>
 </div>
 
