@@ -71,6 +71,7 @@
 
 <svelte:head>
   <title>voytxt</title>
+  <meta name="theme-color" content="#6366f1" />
   <meta name="description" content="Click for cat pics!" />
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/65811166" />
 
