@@ -79,19 +79,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Sometype+Mono:wght@400..700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Sometype+Mono:wght@400..700&family=Source+Code+Pro:wght@700&display=swap"
     rel="stylesheet"
   />
 </svelte:head>
 
 <style>
-  /* replace with google fonts once https://github.com/google/fonts/issues/8030 gets merged */
-  @font-face {
-    font-family: 'Source Code Pro';
-    font-display: swap;
-    src: url(/SourceCodePro-Bold.ttf.woff2) format('woff2');
-  }
-
   :root {
     --textSize: 6rem;
     --columnCount: 3;
