@@ -70,6 +70,11 @@
   </main>
 </div>
 
+<footer>
+  <div>[voylxt]</div>
+  <div><span style="color: transparent;">..-</span>t</div>
+</footer>
+
 <svelte:head>
   <title>voytxt</title>
   <meta name="theme-color" content="#6366f1" />
@@ -79,7 +84,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Sometype+Mono:wght@400..700&family=Source+Code+Pro:wght@700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@700&family=Atkinson+Hyperlegible+Next:wght@700&family=JetBrains+Mono&family=Source+Code+Pro:wght@700&display=swap"
     rel="stylesheet"
   />
 </svelte:head>
@@ -88,6 +93,26 @@
   :root {
     --textSize: 6rem;
     --columnCount: 3;
+  }
+
+  /* Outward by Raoul Audouin. Distributed by velvetyne.fr. */
+  @font-face {
+    font-family: 'Outward';
+    src: url('/fonts/outward-block-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Outward';
+    src: url('/fonts/outward-borders-webfont.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Outward';
+    src: url('/fonts/outward-round-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
   }
 
   @media screen and (width < 1000px) {
@@ -106,6 +131,24 @@
     }
   }
 
+  footer {
+    position: relative;
+
+    & > div {
+      position: absolute;
+      inset: 0;
+      text-align: center;
+      font-family: Outward;
+      font-size: 60vw;
+      line-height: 68vw;
+      white-space: nowrap;
+      user-select: none;
+      color: white;
+      /* font-weight: bold; */
+      /* font-style: italic; */
+    }
+  }
+
   .outer {
     display: flex;
     flex-direction: column;
@@ -117,7 +160,6 @@
   }
 
   header {
-    font-family: 'SomeType Mono', monospace;
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -160,7 +202,7 @@
   }
 
   h1 {
-    font-family: 'SomeType Mono', monospace;
+    font-family: 'Atkinson Hyperlegible Mono', monospace;
     text-align: center;
     font-size: var(--textSize);
     margin: 0;

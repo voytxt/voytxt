@@ -14,7 +14,7 @@
     transition: all 100ms ease-out;
     padding: 1rem;
     color: white;
-    font-family: 'SomeType Mono', monospace;
+    font-family: 'JetBrains Mono', monospace;
     box-shadow: -1px 0 #fffa;
 
     &:hover,
@@ -34,13 +34,14 @@
 
     span {
       font-weight: bold;
+      font-family: 'Atkinson Hyperlegible Next';
 
       .arrow {
         font-family: 'Source Code Pro', monospace;
         position: relative;
         bottom: 0.25rem;
         right: -0.25rem;
-        font-weight: 700;
+        font-weight: bold;
         user-select: none;
       }
     }

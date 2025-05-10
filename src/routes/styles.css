@@ -6,6 +6,6 @@ body {
   margin: 0;
 
   &:has(.homepage) {
-    background-color: #6366f1;
+    background-color: oklch(58% 0.2 277);
   }
 }
