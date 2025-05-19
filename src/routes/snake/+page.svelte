@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
+  import type { readonly } from 'svelte/store';
 
   const GRID_SIZE = 30;
 
@@ -64,9 +65,18 @@
 
     const newDirection = directions[event.key];
 
-    if (newDirection !== undefined) {
-      snakeDirection = newDirection;
+    if (newDirection === undefined) return;
+
+    if (snake.length > 1) {
+      const head = [...snake[0]];
+      const neck = snake[1];
+      head[0] += newDirection[0];
+      head[1] += newDirection[1];
+
+      if (head[0] === neck[0] && head[1] === neck[1]) return;
     }
+
+    snakeDirection = newDirection;
   }
 </script>
 
