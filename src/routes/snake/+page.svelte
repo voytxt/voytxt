@@ -1,6 +1,5 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
-  import type { readonly } from 'svelte/store';
 
   const GRID_SIZE = 30;
 
