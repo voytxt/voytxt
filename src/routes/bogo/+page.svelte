@@ -14,7 +14,9 @@
     running = true;
     sorted = false;
     tries = 0;
-    array = new Array(numberOfElements).fill(null).map((_, i) => i + 1);
+    array = Array.from({ length: numberOfElements })
+      .fill(null)
+      .map((_, i) => i + 1);
 
     bogo();
   }
