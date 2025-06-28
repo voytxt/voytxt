@@ -178,7 +178,7 @@
   }
 
   button {
-    background: url('/cattus512.png');
+    background: url('/cattus512.avif');
     background-size: 120%;
     background-position: 20% 20%;
     margin: 0 auto;
