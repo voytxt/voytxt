@@ -98,6 +98,8 @@
     rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&text=↗&display=swap"
   />
+
+  <link rel="preload" href="/cattus512-crf23.avif" as="image" fetchpriority="high" />
 </svelte:head>
 
 <style>
