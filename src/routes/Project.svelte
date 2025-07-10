@@ -34,7 +34,7 @@
 
     span {
       font-weight: bold;
-      font-family: 'Atkinson Hyperlegible Next';
+      font-family: 'Atkinson Hyperlegible Next', sans-serif;
 
       .arrow {
         font-family: 'Source Code Pro', monospace;

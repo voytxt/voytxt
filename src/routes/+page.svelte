@@ -10,7 +10,6 @@
   });
 </script>
 
-<!-- svelte-ignore a11y_no_static_element_interactions -->
 <div class="outer homepage">
   <header>
     <a href="https://github.com/voytxt/" aria-label="GitHub">
@@ -84,8 +83,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@700&family=Atkinson+Hyperlegible+Next:wght@700&family=JetBrains+Mono&family=Source+Code+Pro:wght@700&display=swap"
     rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@700&text=voytxt&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&text=0123456789-eternal&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@700&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&text=↗&display=swap"
   />
 </svelte:head>
 
@@ -99,20 +110,9 @@
   @font-face {
     font-family: 'Outward';
     src: url('/fonts/outward-block-webfont.woff2') format('woff2');
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
-  }
-  @font-face {
-    font-family: 'Outward';
-    src: url('/fonts/outward-borders-webfont.woff2') format('woff2');
-    font-weight: bold;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'Outward';
-    src: url('/fonts/outward-round-webfont.woff2') format('woff2');
-    font-weight: normal;
-    font-style: italic;
+    font-display: block;
   }
 
   @media screen and (width < 1000px) {
@@ -144,8 +144,6 @@
       white-space: nowrap;
       user-select: none;
       color: white;
-      /* font-weight: bold; */
-      /* font-style: italic; */
     }
   }
 
