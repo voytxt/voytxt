@@ -1,4 +1,5 @@
 <script lang="ts">
+  import heroImage from '$lib/hero.avif';
   import Project from './Project.svelte';
 
   let clicks = $state(0);
@@ -99,7 +100,7 @@
     href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&text=↗&display=swap"
   />
 
-  <link rel="preload" href="/cattus512-crf23.avif" as="image" fetchpriority="high" />
+  <link rel="preload" href={heroImage} as="image" fetchpriority="high" />
 </svelte:head>
 
 <style>
@@ -111,7 +112,7 @@
   /* Outward by Raoul Audouin. Distributed by velvetyne.fr. */
   @font-face {
     font-family: 'Outward';
-    src: url('/fonts/outward-block-webfont.woff2') format('woff2');
+    src: url('$lib/outward-block-webfont.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: block;
@@ -178,7 +179,7 @@
   }
 
   button {
-    background: url('/cattus512-crf23.avif');
+    background: url('$lib/hero.avif');
     background-size: 120%;
     background-position: 20% 20%;
     margin: 0 auto;
