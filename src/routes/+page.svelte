@@ -36,10 +36,15 @@
   <h1>voytxt</h1>
 
   <main>
-    <Project time="eternal" name="voytxt" link="/" />
+    <Project time="eternal" name="voytxt.com" link="/" />
     <Project time="eternal" name="cube timer" link="https://timer.voytxt.com/" />
     <Project time="eternal" name="pickle hunt" link="https://picklehunt.voytxt.com" />
     <Project time="eternal" name="geocaching stats" link="/gcstats" />
+    <Project
+      time="2025-07"
+      name="flatpak list updates"
+      link="https://github.com/voytxt/flatpak-list-updates"
+    />
     <Project time="2025-02" name="wca bot" link="https://bsky.app/profile/wca.voytxt.com" />
     <Project time="2024-12" name="&pi;" link="/pi" />
     <Project time="2024-12" name="robtop bot" link="https://bsky.app/profile/robtop.voytxt.com" />
