@@ -66,7 +66,7 @@
     <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
     <!-- svelte-ignore a11y_no_static_element_interactions -->
     <span
-      class:hidden={hidePassword}
+      class={{ hidden: hidePassword }}
       onclick={copyPassword}
       onfocus={copyPassword}
       tabindex="0"

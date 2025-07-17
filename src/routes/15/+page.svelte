@@ -72,7 +72,7 @@
   <main>
     {#each squares as square}
       {#if square !== null}
-        <button class="square" class:green={isSolved} onclick={() => handleClick(square)}>
+        <button class={['square', { green: isSolved }]} onclick={() => handleClick(square)}>
           {square}
         </button>
       {:else}
@@ -81,7 +81,7 @@
     {/each}
   </main>
 
-  <button id="shuffle" onclick={shuffle}>Shuffle</button>
+  <button onclick={shuffle}>Shuffle</button>
 </div>
 
 <style>
