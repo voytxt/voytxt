@@ -4,11 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
-    "preview": "vite preview",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "dev": "NODE_OPTIONS=--experimental-strip-types vite dev",
+    "build": "NODE_OPTIONS=--experimental-strip-types vite build",
+    "preview": "NODE_OPTIONS=--experimental-strip-types vite preview",
+    "check": "NODE_OPTIONS=--experimental-strip-types svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "NODE_OPTIONS=--experimental-strip-types svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "format": "prettier --write .",
     "lint": "oxlint"
   },
