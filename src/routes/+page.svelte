@@ -9,6 +9,12 @@
       location.assign('https://google.com/search?q=cute+cat+pics');
     }
   });
+
+  let accent = $state('oklch(58% 0.2 277)');
+
+  function handleScroll() {
+    accent = getComputedStyle(document.body).backgroundColor;
+  }
 </script>
 
 <div class="outer homepage">
@@ -82,7 +88,7 @@
 
 <svelte:head>
   <title>voytxt</title>
-  <meta name="theme-color" content="#6366f1" />
+  <meta name="theme-color" content={accent} />
   <meta name="description" content="Click for cat pics!" />
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/65811166" />
 
@@ -107,6 +113,8 @@
 
   <link rel="preload" href={heroImage} as="image" fetchpriority="high" />
 </svelte:head>
+
+<svelte:document onscroll={handleScroll} />
 
 <style>
   :root {
@@ -146,7 +154,7 @@
       position: absolute;
       inset: 0;
       text-align: center;
-      font-family: Outward;
+      font-family: 'Outward';
       font-size: 60vw;
       line-height: 68vw;
       white-space: nowrap;
