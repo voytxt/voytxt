@@ -13,9 +13,6 @@ const bl = browserslist('since 2025');
 export default defineConfig({
   plugins: [sveltekit()],
 
-  // disabled for now, as it causes fouc
-  // experimental: { enableNativePlugin: true },
-
   build: { target: browserslistToEsbuild(bl) },
   css: {
     transformer: 'lightningcss',
