@@ -41,31 +41,57 @@
 
   <h1>voytxt</h1>
 
+  <h2>currently working on</h2>
+
   <main>
-    <Project time="eternal" name="voytxt.com" link="/" />
-    <Project time="eternal" name="cube timer" link="https://timer.voytxt.com/" />
-    <Project time="eternal" name="pickle hunt" link="https://picklehunt.voytxt.com" />
-    <Project time="eternal" name="geocaching stats" link="/gcstats" />
+    <Project
+      main
+      time="WIP"
+      name="chess"
+      desc="written in Gleam and SvelteKit"
+      link="https://chess.voytxt.com"
+    />
+    <Project
+      main
+      time="WIP"
+      name="pergameny palackého"
+      link="https://pp.voytxt.com"
+      desc="high school notes (in czech)"
+    />
+    <Project main time="~" name="voytxt.com" link="/" desc="you're here!" />
+  </main>
+
+  <h2>side projects</h2>
+
+  <aside>
+    <Project time="TODO" name="pickle hunt" link="https://picklehunt.voytxt.com" />
+    <Project time="2025" name="wca bot" link="https://bsky.app/profile/wca.voytxt.com" />
+    <Project time="2024" name="cube timer" link="https://timer.voytxt.com/" />
+    <Project time="2024" name="robtop bot" link="https://bsky.app/profile/robtop.voytxt.com" />
+    <Project time="2023" name="geocaching stats" link="/gcstats" />
+    <Project time="2022" name="popeláři" link="https://github.com/voytxt/popelari" />
+    <Project time="2022" name="TLGE2 explorer" link="https://tlge2.vercel.app/" />
+    <Project time="2022" name="wocabee bot" link="https://wocabot.vercel.app/" />
+  </aside>
+
+  <h2>side side projects :)</h2>
+
+  <aside>
     <Project
       time="2025-07"
       name="flatpak list updates"
       link="https://github.com/voytxt/flatpak-list-updates"
     />
-    <Project time="2025-02" name="wca bot" link="https://bsky.app/profile/wca.voytxt.com" />
     <Project time="2024-12" name="&pi;" link="/pi" />
-    <Project time="2024-12" name="robtop bot" link="https://bsky.app/profile/robtop.voytxt.com" />
     <Project time="2024-12" name="stacker stats" link="https://stackerstats.voytxt.com" />
     <Project time="2024-12" name="low-budget desmos" link="/desmos" />
     <Project time="2023-02" name="geocache lookup" link="/gc" />
     <Project time="2023-02" name="flashlight" link="https://github.com/voytxt/flashlight" />
-    <Project time="2022-12" name="popeláři" link="https://github.com/voytxt/popelari" />
     <Project time="2022-09" name="translator" link="/translator" />
-    <Project time="2022-09" name="TLGE2 explorer" link="https://tlge2.vercel.app/" />
     <Project time="2022-09" name="more or less" link="/mol" />
     <Project time="2022-05" name="bio changer" link="https://github.com/voytxt/about-me-changer" />
     <Project time="2022-05" name="czechia" link="/czechia" />
     <Project time="2022-05" name="old portfolio 2" link="https://vojta.vercel.app/" />
-    <Project time="2022-03" name="wocabee bot" link="https://wocabot.vercel.app/" />
     <Project time="2022-03" name="random image" link="/image" />
     <Project time="2022-03" name="16 assholes" link="/16" />
     <Project time="2022-02" name="password generator" link="/password" />
@@ -76,9 +102,8 @@
     <Project time="2021-07" name="analog clock" link="/clock" />
     <Project time="2021-07" name="15 puzzle" link="/15" />
     <Project time="2021-06" name="old cube timer" link="https://cube-timer-1.vercel.app/" />
-    <!-- <Project time="2021-03" name="covid chart" link="" /> -->
     <Project time="2020-05" name="time online" link="/time" />
-  </main>
+  </aside>
 </div>
 
 <footer>
@@ -100,7 +125,7 @@
   />
   <link
     rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&text=0123456789-eternal&display=swap"
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
   />
   <link
     rel="stylesheet"
@@ -199,14 +224,13 @@
     width: min(420px, 80vw);
     height: min(420px, 80vw);
     border-radius: 40px;
-    transition: all 125ms ease-out;
+    transition: all 200ms ease-out;
     border: none;
+    outline: 4px solid transparent;
 
     &:hover {
       filter: saturate(1.25);
-      box-shadow:
-        0 10px 15px -3px rgb(0 0 0 / 0.2),
-        0 4px 6px -4px rgb(0 0 0 / 0.2);
+      outline: 4px solid white;
     }
 
     &:active {
@@ -223,7 +247,18 @@
     color: white;
   }
 
+  h2 {
+    color: white;
+  }
+
   main {
+    margin: 1rem 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(calc(var(--columnCount) - 1), 1fr);
+    gap: 2rem;
+  }
+
+  aside {
     margin: 1rem 0 2rem;
     display: grid;
     grid-template-columns: repeat(var(--columnCount), 1fr);

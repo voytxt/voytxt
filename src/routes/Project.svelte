@@ -1,10 +1,17 @@
 <script lang="ts">
-  const { time, link, name }: { time: string; link: string; name: string } = $props();
+  const {
+    main,
+    time,
+    link,
+    name,
+    desc,
+  }: { main?: boolean; time: string; link: string; name: string; desc?: string } = $props();
 </script>
 
-<a href={link}>
+<a href={link} class={{ main }}>
   <time datetime={time}>{time}</time>
   <span>{name}<span class="arrow">↗</span></span>
+  {#if desc !== undefined}<p>{desc}</p>{/if}
 </a>
 
 <style>
@@ -27,6 +34,10 @@
       }
     }
 
+    &.main {
+      font-size: 1.25rem;
+    }
+
     time {
       transition: color 100ms ease-out;
       color: #fffa;
@@ -44,6 +55,13 @@
         font-weight: bold;
         user-select: none;
       }
+    }
+
+    p {
+      margin: 0;
+      padding-top: 0.5em;
+      font-family: system-ui;
+      font-size: 1rem;
     }
   }
 </style>
