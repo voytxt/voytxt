@@ -61,7 +61,7 @@ async function getDtChart(
     })
     .post();
 
-  const chart = dtChart.match(/(?<=>\s*)\d+(?=\s*<\/(td|b)>)|&nbsp;/g);
+  const chart = dtChart.match(/((?<=(span|b)>)\d+|&nbsp;)(?=[^]*<\/table)/g);
   const dtCombinations = dtChart.match(/(?<=<b>)\d+(?=<\/b> Diff)/)?.[0];
 
   if (chart === null || isEmpty(dtCombinations)) {
