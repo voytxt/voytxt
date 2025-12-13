@@ -1,4 +1,0 @@
-onlyBuiltDependencies:
-  - esbuild
-overrides:
-  vite: npm:rolldown-vite@latest
