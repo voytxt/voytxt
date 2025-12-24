@@ -9,7 +9,7 @@ I know frontend the best, but I've been dabbling with backend and systems progra
 - [Pickle Hunt](https://picklehunt.voytxt.com/), a site for analyzing achievements on the Hypixel Minecraft server.
 - [WCA Bluesky bot](https://bsky.app/profile/wca.voytxt.com), which posts the latest Rubik's Cube World & Continental records.
 - [Chess](https://chess.voytxt.com/), completely written in the Gleam programming language.
-- Discord bio changer. I had a my Discord bio automatically update with the latest statistics from TETR.IO.
+- Discord bio changer. I had my Discord bio automatically update with the latest statistics from TETR.IO.
 - An Instagram bot that posted name days (_svátky_ in Czechia) for each day, with a random photo in the background, as well as stats about the name.
 - Each year since 2022, I've also been doing [Advent of Code](https://adventofcode.com/) in TypeScript, and as of 2025 in Gleam as well.
 
