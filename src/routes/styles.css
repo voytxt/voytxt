@@ -19,7 +19,7 @@ body {
   margin: 0;
 
   &:has(.homepage) {
-    background-color: oklch(58% 0.2 var(--hue));
+    background-color: oklch(40% 0.2 var(--hue));
     animation: linear hue-animation;
     animation-timeline: scroll(root);
   }
