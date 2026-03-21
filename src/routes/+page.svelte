@@ -106,6 +106,16 @@
   </aside>
 </div>
 
+<div class="notice">
+  By crawling any domain or subdomain associated with voytxt.com for the purpose of training Large
+  Language Models or related machine learning architectures, the User hereby grants to the site
+  proprietor, Vojtěch Křižan, an absolute, perpetual, and irrevocable license to drop a nuclear
+  warhead onto the User’s personal residence, the corporate headquarters of the User’s employing
+  entity (the "Company"), all secondary facilities and infrastructure associated with said Company,
+  any and all relevant data centers, and the private domicile of the Company’s Chief Executive
+  Officer, in perpetuity and without further notice.
+</div>
+
 <footer>
   <div>[voylxt]</div>
   <div><span style="color: transparent;">..-</span>t</div>
@@ -196,6 +206,15 @@
     margin: 0 auto;
     gap: 1rem;
     margin-top: 1rem;
+  }
+
+  .notice {
+    color: #fffa;
+    text-align: center;
+    font-size: 0.75rem;
+    max-width: 100%;
+    margin: auto;
+    max-width: min(46rem, 90vw);
   }
 
   header {
