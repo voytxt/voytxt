@@ -10,7 +10,7 @@
     }
   });
 
-  let accent = $state('oklch(58% 0.2 277)');
+  let accent = $state('oklch(40% 0.2 277)');
 
   function handleScroll() {
     accent = getComputedStyle(document.body).backgroundColor;
