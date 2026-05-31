@@ -127,6 +127,7 @@
   <meta name="description" content="Click for cat pics!" />
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/65811166" />
 
+  <link rel="me" href="https://sifa.id/p/voytxt.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
   <link
