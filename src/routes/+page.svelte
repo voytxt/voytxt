@@ -238,17 +238,17 @@
 
   button {
     background: url('$lib/hero.avif');
-    background-size: 120%;
-    background-position: 20% 20%;
+    background-size: 100%;
     margin: 0 auto;
     width: min(420px, 80vw);
     height: min(420px, 80vw);
-    border-radius: 40px;
+    border-radius: 30px;
     transition: all 200ms ease-out;
     border: none;
     outline: 4px solid transparent;
 
     &:hover {
+      transform: rotate(-1deg);
       filter: saturate(1.25);
       outline: 4px solid white;
     }
