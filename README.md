@@ -13,4 +13,4 @@ I know frontend the best, but I've been dabbling with backend and systems progra
 - An Instagram bot that posted name days (_svátky_ in Czechia) for each day, with a random photo in the background, as well as stats about the name.
 - Each year since 2022, I've also been doing [Advent of Code](https://adventofcode.com/) in TypeScript, and as of 2025 in Gleam as well.
 
-You can contact me via Discord `@voytxt`, or e-mail (my username @ voytxt.com).
+You can contact me via Discord `@voytxt`, [Bluesky DMs](https://bsky.app/profile/voytxt.com), or e-mail (my username @ voytxt.com).
