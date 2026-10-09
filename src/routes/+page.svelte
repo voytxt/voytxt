@@ -1,5 +1,5 @@
 <script lang="ts">
-  import heroImage from '$lib/hero.avif';
+  import heroImage from '#lib/hero.avif';
   import Project from './Project.svelte';
 
   let clicks = $state(0);
@@ -161,7 +161,7 @@
   /* Outward by Raoul Audouin. Distributed by velvetyne.fr. */
   @font-face {
     font-family: 'Outward';
-    src: url('$lib/outward-block-webfont.woff2') format('woff2');
+    src: url('../lib/outward-block-webfont.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: block;
@@ -237,7 +237,7 @@
   }
 
   button {
-    background: url('$lib/hero.avif');
+    background: url('../lib/hero.avif');
     background-size: 100%;
     margin: 0 auto;
     width: min(420px, 80vw);
